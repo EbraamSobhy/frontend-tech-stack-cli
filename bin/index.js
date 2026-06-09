@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 const program = new Command();
 
 program
-    .name("create-project")
+    .name("create-app")
     .description("CLI to create a React.js Vite project with Docker, GitHub Actions, and Netlify")
     .argument("<project-name>", "Name of the project")
     .parse(process.argv);
