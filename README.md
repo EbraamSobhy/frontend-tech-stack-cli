@@ -34,7 +34,7 @@ npm install -g .
 To create a new project, simply run:
 
 ```bash
-create-project my-awesome-app
+create-app my-awesome-app
 ```
 
 This will:

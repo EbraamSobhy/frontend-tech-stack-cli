@@ -2,13 +2,14 @@
     "name": "tech-stack-cli",
     "version": "1.0.0",
     "bin": {
-        "create-project": "./bin/index.js"
+        "create-app": "./bin/index.js"
     },
     "type": "module",
     "dependencies": {
         "chalk": "^5.3.0",
         "commander": "^11.1.0",
         "fs-extra": "^11.2.0",
+        "inquirer": "^14.0.2",
         "ora": "^8.0.1"
     }
 }
