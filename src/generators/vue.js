@@ -14,9 +14,11 @@ export async function generate(projectName, targetDir, templateDir) {
         "Dockerfile": "Dockerfile",
         ".dockerignore": ".dockerignore",
         "netlify.toml": "netlify.toml",
-        "github-workflow.yml": ".github/workflows/deploy.yml"
+        "github-workflow.yml": ".github/workflows/deploy.yml",
+        "Makefile": "Makefile",
+        "git.sh": "git.sh"
     };
-    copyTemplates(templateDir, targetDir, filesToCopy);
+    copyTemplates(templateDir, targetDir, filesToCopy, { "<project-name>": projectName });
 
     runCommand("git init");
 }
