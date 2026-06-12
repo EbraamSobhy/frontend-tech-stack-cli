@@ -1,31 +1,102 @@
 #!/bin/bash
 
-# chmod +x git.sh
-# ./git.sh
-
-echo "Choose an option:"
-echo "1) Config git user"
+echo " Git Helper Script"
+echo "1) Create repo and push"
 echo "2) Push code"
-echo "3) Create repo"
+echo "3) Git status"
+echo "4) Pull latest changes"
+echo "5) Create new branch"
+echo "6) Switch branch"
+echo "7) Show branches"
+echo "8) Show commit log"
+echo "9) Clone repository"
+echo "10) Stash changes"
+echo "11) Apply stashed changes"
+echo "12) Reset last commit"
+echo "13) Fetch remote changes"
+echo "14) Show remotes"
+echo "15) Show git config"
+echo "16) Exit"
 
-read -p "Enter your choice " choice
+read -p "Enter your choice: " choice
 
 case "$choice" in
     1)
-        git config user.name "<username>"
-        git config user.email "<email>"
+        read -p "Enter repository URL: " repo_url
+        git add .
+        git commit -m "changes"
+        git remote add origin "$repo_url"
+        git push -u origin master
         ;;
+
     2)
         git add .
-        git commit -m "commit"
-        git push -u origin master
+        read -p "Commit message: " msg
+        git commit -m "$msg"
+        git push
         ;;
+
     3)
-        git add .
-        git commit -m "commit"
-        git remote add origin <link of repo>
-        git push -u origin master
+        git status
         ;;
+
+    4)
+        git pull
+        ;;
+
+    5)
+        read -p "Branch name: " branch
+        git checkout -b "$branch"
+        ;;
+
+    6)
+        read -p "Branch name: " branch
+        git checkout "$branch"
+        ;;
+
+    7)
+        git branch -a
+        ;;
+
+    8)
+        git log --oneline --graph --decorate --all
+        ;;
+
+    9)
+        read -p "Repository URL: " repo_url
+        git clone "$repo_url"
+        ;;
+
+    10)
+        read -p "Stash message: " msg
+        git stash push -m "$msg"
+        ;;
+
+    11)
+        git stash pop
+        ;;
+
+    12)
+        git reset --soft HEAD~1
+        ;;
+
+    13)
+        git fetch --all
+        ;;
+
+    14)
+        git remote -v
+        ;;
+
+    15)
+        git config --list
+        ;;
+
+    16)
+        echo "Goodbye!"
+        exit 0
+        ;;
+
     *)
         echo "Invalid choice."
         exit 1
