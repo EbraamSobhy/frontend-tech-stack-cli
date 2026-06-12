@@ -8,7 +8,7 @@ echo "1) Config git user"
 echo "2) Push code"
 echo "3) Create repo"
 
-read -p "Enter your choice" choice
+read -p "Enter your choice " choice
 
 case "$choice" in
     1)
