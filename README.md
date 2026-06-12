@@ -39,6 +39,8 @@ You can install the CLI globally using npm:
 ```bash
 git clone https://github.com/EbraamSobhy/frontend-tech-stack-cli.git
 
+cd frontend-tech-stack-cli
+
 npm install -g .
 ```
 
