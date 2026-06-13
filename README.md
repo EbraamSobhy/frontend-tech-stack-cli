@@ -8,6 +8,7 @@ A professional-grade CLI tool to scaffold modern frontend projects with a produc
 ## Features
 
 - **Multiple Frameworks:** Support for React, Vue, SvelteKit, Next.js, and Nuxt.js.
+- **Tailwind CSS Integration:** Optional Tailwind CSS setup for all frameworks, pre-configured with the latest Vite-based Tailwind CSS v4 or native framework support.
 - **Framework-Optimized Architecture:** Automatically creates a scalable folder structure tailored to each framework (components, hooks, services, etc.).
 - **Docker Integration:** Pre-configured `Dockerfile` and `.dockerignore` for containerized development.
 - **CI/CD Built-in:** Automated GitHub Actions workflows for building and testing.
@@ -19,11 +20,11 @@ A professional-grade CLI tool to scaffold modern frontend projects with a produc
 
 | Framework | Scaffolding Tool | Features Included |
 | :--- | :--- | :--- |
-| **React** | Vite | Folder structure, Docker, CI/CD, Netlify, Makefile |
-| **Next.js** | create-next-app | App Router, TS, Tailwind, Docker, CI/CD, Makefile |
-| **Vue** | Vue CLI | Folder structure, Docker, CI/CD, Netlify, Makefile |
-| **Nuxt.js** | Nuxt CLI | Folder structure, Docker, CI/CD, Netlify, Makefile |
-| **SvelteKit** | Svelte CLI | Folder structure, Docker, CI/CD, Netlify, Makefile |
+| **React** | Vite | Tailwind CSS, Folder structure, Docker, CI/CD, Netlify, Makefile |
+| **Next.js** | create-next-app | App Router, TS, Tailwind CSS, Docker, CI/CD, Makefile |
+| **Vue** | Vue CLI | Tailwind CSS, Folder structure, Docker, CI/CD, Netlify, Makefile |
+| **Nuxt.js** | Nuxt CLI | Tailwind CSS, Folder structure, Docker, CI/CD, Netlify, Makefile |
+| **SvelteKit** | Svelte CLI | Tailwind CSS, Folder structure, Docker, CI/CD, Netlify, Makefile |
 
 ## Getting Started
 
@@ -60,7 +61,9 @@ Or provide a project name as an argument:
 create-app my-awesome-project
 ```
 
-The interactive wizard will guide you through selecting your preferred framework.
+The interactive wizard will guide you through:
+1. Selecting your preferred framework.
+2. Choosing whether to include **Tailwind CSS**.
 
 ### Post-Installation
 

@@ -71,6 +71,15 @@ program
             }
         ]);
 
+        const { useTailwind } = await inquirer.prompt([
+            {
+                type: "confirm",
+                name: "useTailwind",
+                message: "Do you want to use Tailwind CSS?",
+                default: true,
+            }
+        ]);
+
         const targetDir = path.join(process.cwd(), name);
         const templateDir = path.resolve(__dirname, "../templates");
 
@@ -80,7 +89,7 @@ program
             const generatorPath = path.resolve(__dirname, `../src/generators/${framework}.js`);
             const { generate } = await import(`file://${generatorPath}`);
 
-            await generate(name, targetDir, templateDir);
+            await generate(name, targetDir, templateDir, { useTailwind });
 
             spinner.succeed(chalk.green(`Successfully created ${name} with ${framework}!`));
             console.log("\nTo get started:");

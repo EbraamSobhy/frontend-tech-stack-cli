@@ -39,3 +39,11 @@ export const createFolders = (baseDir, folders) => {
         fs.ensureDirSync(path.join(baseDir, folder));
     }
 };
+
+export const replaceInFile = (filePath, searchValue, replaceValue) => {
+    if (fs.existsSync(filePath)) {
+        let content = fs.readFileSync(filePath, "utf8");
+        content = content.replace(searchValue, replaceValue);
+        fs.writeFileSync(filePath, content);
+    }
+};

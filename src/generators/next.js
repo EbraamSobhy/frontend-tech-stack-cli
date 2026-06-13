@@ -1,7 +1,8 @@
 import { runCommand, copyTemplates, createFolders } from "../utils/common.js";
 
-export async function generate(projectName, targetDir, templateDir) {
-    runCommand(`npx create-next-app@latest ${projectName} --ts --tailwind --eslint --app --src-dir --import-alias "@/*" --use-npm --no-git`);
+export async function generate(projectName, targetDir, templateDir, { useTailwind }) {
+    const tailwindFlag = useTailwind ? "--tailwind" : "--no-tailwind";
+    runCommand(`npx create-next-app@latest ${projectName} --ts ${tailwindFlag} --eslint --app --src-dir --import-alias "@/*" --use-npm --no-git --no-jest`);
 
     process.chdir(targetDir);
 
