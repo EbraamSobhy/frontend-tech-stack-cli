@@ -18,6 +18,36 @@ program
     .description("CLI to create a modern frontend project")
     .argument("[project-name]", "Name of the project")
     .action(async (projectName) => {
+        console.log("");
+        console.log(chalk.cyan("        Welcome to Frontend-Tech-Stack-CLI"));
+        console.log(chalk.green(`
+                                                        $%%%%                            
+                                                       $.....                            
+                                                      S:....!                            
+                                       S&              .....&    &S                      
+                                    # @%              &.....%    S  %@#                  
+                                S&$     %            !....:S    S      $&S               
+                            S# @%        %           $.....@     S         %@#           
+                         S&$         %$&S          S:....!       S @$          $&S       
+                      # @%         %@#               .....&           #@%         %@#    
+                     @%        %$&S                &.....%               S&$%        %@  
+                    %      % !....:S                   # @%      $                       
+                    %      %$&S                   @.....$                   S&$%      $  
+                    &$%   %   %% @#S             S:....!                S# @%        %$# 
+                      S# @%%   %   %$&S          %.....&             #&$%   %    %@#     
+           S @#            S&$%  %%%% % @#      #.....            #$%  %%%%  %$&S        
+          $:.:%S             S# @$%%%%%% %      !....:#          S%%%%%% % @#           
+          $:...:$                S&$%%%%%      @.....$           S%%%%%$&S               
+           S%:...: @                  #@$$    S:....!            S%$ @#                  
+             #*....!&                   S    %.....&             S                       
+               #*....*&                     #.....                                       
+                @:....%                     !.....#                                      
+              &!....*#                      &&&&&#                                       
+            #*....*&                                                                     
+          #%....!&      @@@@@@@@@@@@@@@S                                                 
+           ...: @      #...............@                                                 
+           @!$S       S!!!!!!!!!!!!!!!&                                                  
+        `));
         let name = projectName;
 
         if (!name) {
