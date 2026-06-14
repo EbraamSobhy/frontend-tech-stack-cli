@@ -30,7 +30,7 @@ export async function generate(projectName, targetDir, templateDir, { useTailwin
         }
     }
 
-    const folders = ["src/components", "src/hooks", "src/services", "src/utils"];
+    const folders = ["src/components", "src/hooks", "src/services", "src/utils", "src/pages"]
     createFolders(targetDir, folders);
 
     const filesToCopy = {

@@ -6,7 +6,7 @@ export async function generate(projectName, targetDir, templateDir, { useTailwin
 
     process.chdir(targetDir);
 
-    const folders = ["src/components", "src/lib", "src/types", "src/hooks", "src/services"];
+    const folders = ["src/components", "src/lib", "src/types", "src/hooks", "src/services", "src/pages"];
     createFolders(targetDir, folders);
 
     const filesToCopy = {
