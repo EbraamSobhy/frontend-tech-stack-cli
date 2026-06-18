@@ -3,7 +3,7 @@ import fs from "fs-extra";
 import path from "path";
 
 export async function generate(projectName, targetDir, templateDir, { useTailwind }) {
-    runCommand(`npm create vue@latest ${projectName} -- --typescript --router --pinia --eslint --prettier --no-cypress`);
+    runCommand(`npm create vue@latest ${projectName} -- --typescript --router --eslint`);
 
     process.chdir(targetDir);
 
