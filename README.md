@@ -52,13 +52,13 @@ npm install -g .
 To start a new project, simply run:
 
 ```bash
-create-app
+frontend-app
 ```
 
 Or provide a project name as an argument:
 
 ```bash
-create-app my-awesome-project
+frontend-app my-awesome-project
 ```
 
 The interactive wizard will guide you through:

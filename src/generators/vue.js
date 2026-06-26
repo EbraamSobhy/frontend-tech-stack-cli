@@ -91,6 +91,8 @@ export async function generate(
         "github-workflow.yml": ".github/workflows/deploy.yml",
         Makefile: "Makefile",
         "git.sh": "git.sh",
+        "vercel.json": "vercel.json",
+        "vercel.md": "vercel.md"
     };
 
     copyTemplates(templateDir, targetDir, filesToCopy, {

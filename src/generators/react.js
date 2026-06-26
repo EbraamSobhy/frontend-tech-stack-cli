@@ -39,7 +39,9 @@ export async function generate(projectName, targetDir, templateDir, { useTailwin
         "netlify.toml": "netlify.toml",
         "github-workflow.yml": ".github/workflows/deploy.yml",
         "Makefile": "Makefile",
-        "git.sh": "git.sh"
+        "git.sh": "git.sh",
+        "vercel.json": "vercel.json",
+        "vercel.md": "vercel.md"
     };
     copyTemplates(templateDir, targetDir, filesToCopy, { "<project-name>": projectName });
 

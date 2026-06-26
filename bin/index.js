@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 const program = new Command();
 
 program
-    .name("create-app")
+    .name("frontend-app")
     .description("CLI to create a modern frontend project")
     .argument("[project-name]", "Name of the project")
     .action(async (projectName) => {

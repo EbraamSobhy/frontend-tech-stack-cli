@@ -2,7 +2,7 @@
     "name": "tech-stack-cli",
     "version": "1.0.0",
     "bin": {
-        "create-app": "./bin/index.js"
+        "frontend-app": "./bin/index.js"
     },
     "type": "module",
     "dependencies": {
